@@ -1,0 +1,46 @@
+package application;
+
+import java.util.Locale;
+import java.util.Scanner;
+
+public class Principal {
+
+	public static void main(String[] args) {
+		
+		Scanner leia = new Scanner(System.in);
+		
+		Locale.setDefault(Locale.US);
+		double xA, xB, xC;
+		double yA, yB, yC;
+		
+		System.out.println("Entre com as medidas do triangulo X: ");
+		xA = leia.nextInt();
+		xB = leia.nextInt();
+		xC = leia.nextInt();
+		
+		System.out.println("Entre com as medidas do triangulo Y: ");
+		yA = leia.nextInt();
+		yB = leia.nextInt();
+		yC = leia.nextInt();
+		
+		double p = (xA + xB + xC);
+		double areaX = Math.sqrt(p * (p - xA) * (p - xB) * (p - xC));
+		
+		p = (yA + yB + yC);
+		double areaY = Math.sqrt(p * (p - yA) * (p - yB) * (p - yC));
+		
+		System.out.printf("Triangulo X area: %.4f", areaX);
+		System.out.printf("Triangulo Y area: %.4f", areaY);
+		
+		if(areaX > areaY) {
+			System.out.println("Maior area é X");
+		}else {
+			System.out.println("Maior area é Y");
+		}
+		
+		
+		leia.close();
+
+	}
+
+}

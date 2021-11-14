@@ -1,0 +1,42 @@
+package exercicio02;
+
+public class Funcionario {
+	
+	private String nome;
+	private double salarioBruto;
+	private double taxaImposto;
+	
+	public Funcionario() {
+		this.salarioBruto = 0;
+		this.taxaImposto = 0;
+	}
+	
+	public String getNome() {
+		return nome;
+	}
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+	public double getSalarioBruto() {
+		return salarioBruto;
+	}
+	public void setSalarioBruto(double salarioBruto) {
+		this.salarioBruto = salarioBruto;
+	}
+	public double getTaxaImposto() {
+		return taxaImposto;
+	}
+	public void setTaxaImposto(double taxaImposto) {
+		this.taxaImposto = taxaImposto;
+	}
+
+	
+	public String mostrarDadosFuncionario() {
+		return "Nome: " + nome + 
+				"\nSalario bruto: " + salarioBruto + 
+				"\nTaxa" + taxaImposto;
+	}
+	
+	
+	
+}
